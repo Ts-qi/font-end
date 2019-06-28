@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>layout-two</title>
+</head>
+<style>
+* {
+  padding: 0;
+  margin: 0;
+}
+html,body {
+  /* height: 100%; */
+}
+</style>
+<body>
+    <!--  
+      全部才有 flex 布局： 其他几种布局方式，参考三栏左右布局；
+
+      1 左宽度固定，右边自适应- 常见
+      
+      2 右边宽度固定，左自适应；
+
+      3 上高度固定，下自适应；
+
+      4 下高度固定，上自适应
+
+    -->
+
+    <!-- 做宽度固定,右边自适应 -->
+    <section class="layout">
+      <style>
+        .layout  {
+          /* height: 100%; */
+        }
+        .layout .left-right {
+          /* height: 100%; */
+          display: flex;
+          justify-content:space-between;
+        }
+        .layout .left {
+          width: 200px;
+          height: 100px;
+          background: yellow;
+        }
+        .layout .right {
+          height: 100px;
+          flex: 1;
+          background: red;
+        }
+      </style>
+
+      <article class="left-right">
+        <div class="left">左固定</div>
+        <div class="right">右自适应</div>
+
+      </article>
+
+    </section>
+
+
+
+</body>
+</html>
