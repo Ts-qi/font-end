@@ -131,7 +131,13 @@
 
     </section>
 
-    <!-- 表格布局-table-cell -->
+    <!-- 表格布局-table-cell
+    
+    优点：兼容性很好；在 flex 不支持的时候 使用表格布局； 内容溢出的时候 会自动的撑开父元素；
+    缺点： 1 无法设置栏边距；
+           2 对 SEO 不是很友好 
+           3 当其中一个单元格高度超出的时候，两侧的单元格也是会跟着一起变高的
+    -->
     <section class='layout table'>
       <style>
         .layout.table .left-center-right {
