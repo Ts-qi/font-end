@@ -14,6 +14,10 @@
 html,body {
   /* height: 100%; */
 }
+.layout {
+  margin-top: 20px;
+
+}
 </style>
 <body>
     <!--  
@@ -65,7 +69,6 @@ html,body {
     <section class="layout l">
       <style>
         .layout.l .left-right {
-          margin-top: 20px;
           display: flex;
           justify-content: space-between;
         }
@@ -86,6 +89,51 @@ html,body {
         
       </article>
     </section>
+    <!-- 上高度固定  下自适应 -->
 
+    <section class="layout t">
+      <style>
+        .layout.t .top-bottom{
+        
+          display: flex;
+          flex-direction: column;
+        }
+        .layout.t .bottom {
+
+          flex: 1;
+          background: yellow;
+        }
+        .layout.t .top {
+          height: 100px;
+          background: blue;
+        }
+      </style>
+      <article class="top-bottom">
+        <div class="top">上高度固定</div>
+        <div class="bottom">
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+          <p>下高度自适应</p>
+        </div>
+      </article>
+
+    </section>
 </body>
 </html>
