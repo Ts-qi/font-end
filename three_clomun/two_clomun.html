@@ -30,22 +30,22 @@ html,body {
     -->
 
     <!-- 做宽度固定,右边自适应 -->
-    <section class="layout">
+    <section class="layout r">
       <style>
         .layout  {
           /* height: 100%; */
         }
-        .layout .left-right {
+        .layout.r .left-right {
           /* height: 100%; */
           display: flex;
           justify-content:space-between;
         }
-        .layout .left {
+        .layout.r .left {
           width: 200px;
           height: 100px;
           background: yellow;
         }
-        .layout .right {
+        .layout.r .right {
           height: 100px;
           flex: 1;
           background: red;
@@ -60,7 +60,32 @@ html,body {
 
     </section>
 
+    <!-- 右边固定，左边自适应 -->
 
+    <section class="layout l">
+      <style>
+        .layout.l .left-right {
+          margin-top: 20px;
+          display: flex;
+          justify-content: space-between;
+        }
+        .layout.l .left {
+          flex: 1;
+          height: 100px;
+          background: yellow;
+        }
+        .layout.l .right {
+          width: 200px;
+          height: 100px;
+          background: blue;
+        }
+      </style>
+      <article class="left-right">
+        <div class="left">左自适应</div>
+        <div class="right">右边固定</div>
+        
+      </article>
+    </section>
 
 </body>
 </html>
