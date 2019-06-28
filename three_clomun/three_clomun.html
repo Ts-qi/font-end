@@ -49,6 +49,7 @@
           </div>
       </article>
     </section>
+
     <!-- 绝对定位布局 -->
 
     <section class="layout absolute">
@@ -82,6 +83,41 @@
             <p>2 ，这是绝对定位布局这是绝对定位布局这是绝对定位布局这是绝对定位布局这是绝对定位布局这是绝对定位布局</p>
         </div>
       </article>
+    </section>
+
+    <!-- dis:flex 布局 -->
+    <section class="layout flex">
+      <style>
+         .layout.flex {
+           margin-top: 140px;
+         }
+        .layout.flex .left-center-right {
+          display: flex;
+        }
+        .layout.flex .left {
+          width: 300px;
+          background: yellow;
+        }
+        .layout.flex .right {
+          width: 300px;
+          background: blue;
+        }
+        .layout.flex .center {
+          flex: 1;
+          background: red;
+        }
+      </style>
+      <artice class="left-center-right">
+        <div class="left"></div>
+        <div class="center">
+          <h2>flex布局</h2>
+          <p>1 ，这是flex布局的解决方案flex布局的解决方案flex布局的解决方案flex布局的解决方案flex布局的解决方案</p>
+          <p>2 ，这是flex布局的解决方案flex布局的解决方案flex布局的解决方案flex布局的解决方案</p>
+        </div>
+      <div class="right"></div>
+
+      </artice>
+
     </section>
 
 </body>
