@@ -85,7 +85,7 @@
       </article>
     </section>
 
-    <!-- dis:flex 布局 -->
+    <!-- dis:flex 布局 --> 
     <section class="layout flex">
       <style>
          .layout.flex {
@@ -120,5 +120,39 @@
 
     </section>
 
+    <!-- 表格布局-table-cell -->
+    <section class='layout table'>
+      <style>
+        .layout.table .left-center-right {
+          width: 100%;
+          height: 100px;
+          display: table;
+        }
+        .layout.table .left-center-right>div {
+          display: table-cell;
+        }
+        .layout.table .left{
+          width: 300px;
+          background: red;
+        }
+        .layout.table .center{
+          background: yellow;
+        }
+        .layout.table .right{
+          width: 300px;
+          background: blue;
+        }
+      </style>
+
+      <article class="left-center-right">
+        <div class="left"></div>
+        <div class="center">
+          <h2>表格布局</h2>
+          <p>1 这是表格布局解决方案表格布局解决方案表格布局解决方案表格布局解决方案表格布局解决方案表格布局解决方案</p>
+          <p>2 这是表格布局解决方案表格布局解决方案表格布局解决方案表格布局解决方案表格布局解决方案表格布局解决方案</p>
+        </div>
+        <div class="right"></div>
+      </article>
+    </section>
 </body>
 </html>
