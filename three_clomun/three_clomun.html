@@ -143,7 +143,6 @@
           background: blue;
         }
       </style>
-
       <article class="left-center-right">
         <div class="left"></div>
         <div class="center">
@@ -153,6 +152,42 @@
         </div>
         <div class="right"></div>
       </article>
+    </section>
+
+    <!-- gird 网格 布局 -->
+
+    <section class="layout gird">
+      <style>
+        .layout.gird .left-center-right {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 300px auto 300px;
+          grid-template-rows:100px; 
+        }
+        .layout.gird .left {
+          background: yellow;
+          width: 300px;
+        }
+        .layout.gird .center {
+          background: red;
+        }
+        .layout.gird .right {
+          background: blue;
+        }
+
+      </style>
+      <article class="left-center-right">
+        <div class="left"></div>
+        <div class="center">
+          <h2>网格布局</h2>
+          <p>1 这是网格布局方案这是网格布局方案这是网格布局方案这是网格布局方案这是网格布局方案 </p>
+          <p>2 这是网格布局方案 </p>
+          <p>2 这是网格布局方案 </p>
+          <p>2 这是网格布局方案 </p>
+        </div>
+        <div class="right"></div>
+      </article>
+
     </section>
 </body>
 </html>
