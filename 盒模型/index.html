@@ -10,39 +10,68 @@
   .d {
     display: inline-block;
   }
+  p {
+    margin-left: 30px;
+  }
+  article {
+    width: 1290px;
+    margin: 0 auto;
+  }
+  h3 {
+    margin-left: 20px;
+  }
 </style>
 <body>
-  <article>
+  <article >
     <h1>盒模型</h1>
-    <h2>分类？</h2>
+    <h2>一，分类？</h2>
     <p>盒模型 有两种： <br>
           1 标准盒模型；<br>
           2 IE 盒模型；
     </p>
-    <h2>组成？</h2>
+    <h2>二，组成？</h2>
         组成： content   border  padding  margin;
-    <h2>区别？ </h2>
+    <h2>三，区别？ </h2>
     <div id="box">
       <img src="./标准盒模型.png" alt="" width="600" height="400" class="d">
       <img src="./IE盒模型.png" alt="" width="600" height="400" class="d">
     </div>
     <p>从两图可以看出： 标准盒模型的 width 和 height 是指content 的宽度和高度,而 IE 的 width 和 height 包括 padding  ,border ,content</p>
-    <h2>js如何获取width 和 height ？</h2>
+    <h2> 四，js如何获取width 和 height ？</h2>
     <h3>标准盒模型的width 和height : </h3> 
 
      <p> dom.style.height/width = xxxx;</p> 
 
     <h3>IE盒模型的width 和height : </h3> 
 
-    dom.currentStyle.width/height = xxx;一般不用 ，在火狐的兼容性不好；<br>
-    window.getComputedStyle(dom).width/height = xxx; 通用性比较的好；一般用这个 ;<br>
+   <p>dom.currentStyle.width/height = xxx;一般不用 ，在火狐的兼容性不好；</p> 
+   <p> window.getComputedStyle(dom).width/height = xxx; 通用性比较的好；一般用这个 ;</p>
 
-
-    dom.getBoundingClientRect().width/height;  用于获取某个元素相对于视窗的位置集合。集合中有top, right, bottom, left,x ，y ,height,width 等属性；
-
-
-      <h2>盒模型 涉及到 边距重叠的问题？</h2>
+    <p>dom.getBoundingClientRect().width/height;  用于获取某个元素相对于视窗的位置集合。集合中有top, right, bottom, left,x ，y ,height,width 等属性；</p>
     
+
+
+      <h2> 五，盒模型 涉及到 边距重叠的问题？ </h2>
+      <h3>BFC:边距重叠解决方案（块级格式化上下文）；</h3>
+        <h4> 1 ,出现情况：</h4>
+         <p> 1 父子元素边距重叠：当父元素为非BFC时，第一个子元素的margin-top会重叠到父元素的margin-top</p>
+         <p>2 兄弟元素边距重叠：当两个相邻的元素为非BFC时，前者的margin-bottom和后者的margin-top会重叠；</p>
+         <p> 3 空元素边距重叠：当空元素设置了margin-top和margin-bottom时，两个margin会重叠；</p>
+     <h4>2, BFC 概念：</h4> 
+    <p>块级格式化上下文，它是指一个独立的块级渲染区域，只有Block-level BOX参与，该区域拥有一套渲染规则来约束块级盒子的布局，且与区域外部无关</p>
+
+    <h4>3, BFC 原理：</h4> 
+      <p>1 BFC区域的元素不会影响外面的元素，反之亦然。</p>
+      <p>2 BFC区域不会与float元素发生重叠</p>
+      <p>3 计算BFC高度时，浮动元素能够撑开BFC的高度，达到清除浮动的效果。</p>
+      <h4>4, BFC 创建：</h4>
+         <p>1  overflow 除了 visible 以外的值 (hidden、auto、scroll)</p>
+         <p>2 float 值不能为 none</p>
+         <p>3 设置position不为relative和static（absolute，fixed，sticky）</p>
+         <p>4 设置display为table-cell，flex，inline-block</p>
+      <h4>5, BFC 的应用：</h4>
+    <p>可以解决边距重叠问题，当不想让两个元素相互影响时，可以对两个元素创建BFC，这样就不会发生边距重叠的问题。对于父子元素边距重叠问题，只需对父元素创建BFC，则可解决父子重叠</p>
+              
 
 
 
