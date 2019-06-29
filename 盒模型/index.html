@@ -22,7 +22,7 @@
     <h2>组成？</h2>
         组成： content   border  padding  margin;
     <h2>区别？ </h2>
-    <div>
+    <div id="box">
       <img src="./标准盒模型.png" alt="" width="600" height="400" class="d">
       <img src="./IE盒模型.png" alt="" width="600" height="400" class="d">
     </div>
@@ -34,9 +34,25 @@
 
     <h3>IE盒模型的width 和height : </h3> 
 
-    dom.
+    dom.currentStyle.width/height = xxx;一般不用 ，在火狐的兼容性不好；<br>
+    window.getComputedStyle(dom).width/height = xxx; 通用性比较的好；一般用这个 ;<br>
+
+
+    dom.getBoundingClientRect().width/height;  用于获取某个元素相对于视窗的位置集合。集合中有top, right, bottom, left,x ，y ,height,width 等属性；
+
+    
+
 
 
   </article>
+  <script>
+
+    let divs = document.getElementById('box')
+    console.log(divs)
+  console.log(divs.getBoundingClientRect(),'getBoundingClientRect')
+
+
+  
+  </script>
 </body>
 </html>
