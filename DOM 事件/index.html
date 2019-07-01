@@ -51,12 +51,21 @@
   <p>事件冒泡的流程： 和捕获相反</p>
 
 
-  <h3> 4，Event对象的常见应用</h3>
+  <h3> 4，Event对象的常见应用---自定义事件</h3>
   <p>1 e.preventDefault();阻止默认事件</p>
   <p>1 e.stopPropagation();阻止冒泡事件</p>
   <p>1 e.stopImmediatePropagation();事件响应优先级</p>
   <p>1 e.currentTarget;当前绑定的对象</p>
   <p>1 e.target;</p>
   <h3> 5，自定义事件</h3>
+  <p>利用 new Event()方法；  var domEvent = new Event('scroll')； scroll 事件名；</p>
+  <p>  dom.addEventListener('scroll',function() {
+    
+    。。。。。do something
+  })</p>
+  <p>  出发自定义事件：dom.dispatchEvent(domEvent) </p>
+  <p>  var dom = new Event('scroll')</p>
+
+  <p>注意： new  CustomEvent(事件名，object参数); new Event(事件名)； 其他用法一致；</p>
 </body>
 </html>
