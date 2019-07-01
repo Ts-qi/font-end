@@ -6,15 +6,46 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>DOM 事件</title>
 </head>
+<style>
+  h2 {
+    margin-left: 20px;
+  }
+  h3 {
+    margin-left: 30px;
+  }
+  p {
+    margin-left: 40px;
+  }
+</style>
 <body>
   <h1>DOM</h1>
 
   <h2>一，DOM 事件类</h2>
 
-  <h3>事件级别</h3>
-  <p> DOM0 ：  element.onclick = function(){}</p>;
+  <h3>1,事件级别</h3>
+  <p> DOM0 ：  element.onclick = function(){};</p>
   <p>DOM1:  没有涉及事件相关</p>
-  <p>DOM2:  element.addEventListener('click',function(),'false (冒泡 或捕获)') ；IE： element.attchEvent('click',function(),'false (冒泡 或捕获)')</p>
+  <p>
+    
+    DOM2: 1 element.addEventListener('click',function(),'false (false: 冒泡(默认) 或捕获：true)') ；IE： element.attchEvent('click',function(),'false (false: 冒泡(默认) 或捕获：true)') <br>
+      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   2 多次绑定后执行的顺序是不一样的，attachEvent是后绑定先执行，addEventListener是先绑定先执行
+
+  </p>
   <p>DOM3:  element.addEventListener(' keyUp',function(),'false')</p>
+
+  <h3>2,事件模型</h3>
+
+  <p>事件捕获：从上到下；</p>
+  <p>事件冒泡：从下到上；</p>
+
+  <p>阻止冒泡和捕获： e.stopPropagation()，IE则是使用e.cancelBubble = true</p>
+  <p>取消默认事件： e.preventDefault()，IE则是使用e.returnValue = false; 什么元素有默认行为呢？如链接<a>，提交按钮 input type=”submit” 等。当Event 对象的 cancelable为false时，表示没有默认行为，这时即使有默认行为，调用preventDefault也是不会起作用的。</p>
+
+  <h3> 3，事件流 浏览器与页面的交互</h3>
+  <p> 一阶段：捕获阶段 </p>
+  <p> 二阶段：目标阶段 </p>
+  <p> 三阶段：冒泡阶段 </p>
+
+   <p> 流程： 事件通过捕获到达目标阶段，在从目标阶段传入到冒泡阶段</p>
 </body>
 </html>
