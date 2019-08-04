@@ -7,6 +7,20 @@
   <title>渲染机制</title>
 </head>
 <body>
+  <h1>渲染机制</h1>
+  <script>
+  let obj1={
+      a:222
+  };
+  let obj2={
+      a:111,
+      fn:function(){
+          alert(this.a);
+      }
+  }
+  obj1.fn=obj2.fn;
+  obj2.fn();//222
   
+  </script>
 </body>
 </html>
